@@ -294,7 +294,7 @@ const ListComponent = (data) => {
     return (
       <ListItem
         style={selectedTables.includes(entry.index) ? { backgroundColor: '#a2d2ff' } : undefined}
-        title={'Table number: ' + entry.index}
+        title={'Table number: ' + entry.item.number}
         description={'Table size : ' + entry.item.size}
         accessoryRight={() => renderItemAccessory(entry)}
         refreshing={refreshing}

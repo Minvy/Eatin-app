@@ -41,7 +41,6 @@ const restaurantReducer = (state = initialState, action) => {
       return {
         ...state,
         restaurant: { ...state.restaurant, ...action.newRestaurantValues },
-        restaurantOrders: { ...state.restaurantOrders },
       };
     case ACCEPT_ORDER:
       //Get cart without the item about to be added.
@@ -86,7 +85,7 @@ const restaurantReducer = (state = initialState, action) => {
     case FETCH_ORDER_BY_RESTAURANT_FILTERED: {
       return {
         ...state,
-        restaurantOrders: action.payload,
+        restaurantOrders: action.payload.restaurantOrders,
       }
     }
     default:

@@ -44,7 +44,7 @@ const Navbar = ({ navigation, state }) => {
             icon={(e) => (<Icon {...e} name='home-outline' />)} 
             title="Restaurant" />
           <BottomNavigationTab 
-            icon={(e) => (<Icon {...e} name='search-outline' />)} 
+            icon={(e) => (<Icon {...e} name='shopping-cart-outline' />)} 
             title="Orders" />
           <BottomNavigationTab 
             icon={(e) => (<Icon {...e} name='clipboard-outline' />)} 

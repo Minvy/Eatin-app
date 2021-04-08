@@ -65,7 +65,6 @@ const OrderScreen = (props) => {
   } else {
     return (
       <Layout style={styles.container}>
-        <Button onPress={() => console.log(restaurantss)} />
         <List />
       </Layout>
     );

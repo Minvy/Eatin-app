@@ -153,21 +153,22 @@ const BookingsListEntry = ({ item }) => {
       </View>
       {/* Buutons */}
       <View style={styles.buttonContainer}>
-        <Button style={styles.button} size='medium' status='basic' disabled={isCancelled} onPress={() => { item.onCancel(entry.id) }}>
-          Cancel
-        </Button>
+        {entry.orderStatus != 'done' && (
+          <Button style={styles.button} size='medium' status='basic' disabled={isCancelled} onPress={() => { item.onCancel(entry.id) }}>
+            Cancel
+          </Button>) || null}
         {haveOrder && entry.orderStatus == 'pending' && isManager && (
           <Button style={styles.button} size='medium' status='basic' onPress={() => { item.acceptOrder(entry.id) }}>
             Accept Order
-        </Button> ) || null}
+          </Button>) || null}
         {haveOrder && entry.orderStatus == 'accepted' && isManager && (
           <Button style={styles.button} size='medium' status='basic' onPress={() => { item.doneOrder(entry.id) }}>
             Done
-        </Button> ) || null}
+          </Button>) || null}
         {haveBooking && !isManager && (
           <Button style={styles.button} size='medium' status='basic' disabled={checkExtendable()} onPress={() => { item.onExtend(entry) }}>
             Extend Booking
-        </Button>) || null}
+          </Button>) || null}
         {/* {item.isManager && order && (
           <Button style={styles.button} size='medium' status='basic' onPress={() => item.onAccept}>
             Accept

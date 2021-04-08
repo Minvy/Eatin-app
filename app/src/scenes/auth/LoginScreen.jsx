@@ -76,12 +76,12 @@ const LoginScreen = (props) => {
           </View>
         </KeyboardAvoidingView>
 
-        <Button onPress={LoginAdmin}>
+        {/* <Button onPress={LoginAdmin}>
           Admin Login
         </Button>
         <Button onPress={LoginUser}>
           User Login
-        </Button>
+        </Button> */}
 
         <View style={styles.bottomLink}>
           <Text appearance='hint' style={{ marginBottom: 10 }} onPress={handleResetPassword}>Forgotten Password ?</Text>

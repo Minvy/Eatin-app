@@ -122,8 +122,7 @@ export const FETCH_ORDER_BY_RESTAURANT_FILTERED =
 export const fetchOrderByRestaurant = (restaurantId) => {
   return async (dispatch) => {
     getOrders(restaurantId).then(data => {
-      console.log(data.restaurantOrders)
-      // dispatch({ type: FETCH_ORDER_BY_RESTAURANT_FILTERED, payload: data });
+      dispatch({ type: FETCH_ORDER_BY_RESTAURANT_FILTERED, payload: data });
     }).catch(console.log)
   }
 }
